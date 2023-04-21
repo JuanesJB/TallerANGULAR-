@@ -1,0 +1,22 @@
+<h1>Lista de series</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Canal</th>
+      <th>Temporadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let serie of series">
+      <td>{{ serie.id }}</td>
+      <td>{{ serie.name }}</td>
+      <td>{{ serie.channel }}</td>
+      <td>{{ serie.seasons }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>El promedio de temporadas de todas las series es {{ averageSeasons }}</p>
