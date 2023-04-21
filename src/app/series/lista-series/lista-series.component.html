@@ -1,22 +1,25 @@
-<h1>Lista de series</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Canal</th>
-      <th>Temporadas</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let serie of series">
-      <td>{{ serie.id }}</td>
-      <td>{{ serie.name }}</td>
-      <td>{{ serie.channel }}</td>
-      <td>{{ serie.seasons }}</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>El promedio de temporadas de todas las series es {{ averageSeasons }}</p>
+<div style="background-color: #fafafa; padding: 10px; border: 1px solid #ddd;">
+  <img src= "assets/OldTV.png" style="width: 110px; height: auto; float: left; margin-right: 10px;">
+  <h1 style="background-color: #00b3b3; color: #fff; padding: 10px; text-align: center; margin: 0;">Lista de series</h1>
+  <table class="table" style="background-color: #fff; border-collapse: collapse; width: 100%; border: 1px solid #ddd;">
+    <thead>
+      <tr style="background-color: #00b3b3; color: #fff; text-align: left;">
+        <th style="padding: 10px;">ID</th>
+        <th style="padding: 10px;">Nombre</th>
+        <th style="padding: 10px;">Canal</th>
+        <th style="padding: 10px;">Temporadas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let serie of series" style="border: 1px solid #ddd;">
+        <td style="padding: 10px;">{{ serie.id }}</td>
+        <td style="padding: 10px; color: #1d0af6;">{{ serie.name }}</td>
+        <td style="padding: 10px;">{{ serie.channel }}</td>
+        <td style="padding: 10px;">{{ serie.seasons }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top: 20px;">
+    <p style="color: #333;">El promedio de temporadas de todas las series es <strong>{{ averageSeasons }}</strong>.</p>
+  </div>
+</div>
